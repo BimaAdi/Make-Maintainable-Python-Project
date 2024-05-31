@@ -7,7 +7,7 @@ In this blog I will show you how to eleminate this problem to make your python p
 ## Define your python version
 Every python depedencies has diffrent python version requirement. For example python 2.7 (who still use python 2.7 in 2024??) it can only work with
 django version 1.8. Fastapi need minimum python 3.5 because feature typehint first introduce on python 3.5. Where should I define python version?
-personally I put it on README.md. I create section called requirement then I put it on their. You can see on this github repo.
+personally I put it on README.md. I create section called requirement then I put it on their. You can see on this github repo [https://github.com/BimaAdi/Make-Maintainable-Python-Project](https://github.com/BimaAdi/Make-Maintainable-Python-Project).
 
 ## Using virtual environtment
 By default when using pip if you do `pip install {some package}` it will store globaly and will be available to all your project.
@@ -46,7 +46,6 @@ project update your requirements.txt using `pip freeze > requirements.txt`.
 
 
 To make it more clear I have some code example that generate fake user data then stored in csv that use all these tips. You can see it from this github repo 
-TODO link github
-It has several branch 
+[https://github.com/BimaAdi/Make-Maintainable-Python-Project](https://github.com/BimaAdi/Make-Maintainable-Python-Project)
 
 That's all guys there are still more tips to make maintainable python project such as project structure, using testing, formater, etc, But I want to scope it just to python specific project and as minimal as possible. If you have more tips or you have diffrent opinion you can add it on comment section below. Cheers.
