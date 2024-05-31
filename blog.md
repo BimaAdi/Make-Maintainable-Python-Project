@@ -5,16 +5,15 @@ college pc as well. Facing this issue over and over is not productive.
 In this blog I will show you how to eleminate this problem to make your python project maintainable. Using some common python project best practice.
 
 ## Define your python version
-Every python depedencies has diffrent python version requirement. For example python 2.7 (who still use python 2.7 in 2024??) it can only work with
-django version 1.8. Fastapi need minimum python 3.5 because feature typehint first introduce on python 3.5. Where should I define python version?
-personally I put it on README.md. I create section called requirement then I put it on their. You can see on this github repo [https://github.com/BimaAdi/Make-Maintainable-Python-Project](https://github.com/BimaAdi/Make-Maintainable-Python-Project).
+Every python depedencies has diffrent python version requirement. For example python 2.7 (who still use python 2.7 in 2024??) it can only work with django version 1.8. Fastapi need minimum python 3.5 because feature typehint first introduce on python 3.5. 
+
+Where should I define python version? personally I put it on README.md. I create section called requirement then I put it on their. You can see on this github repo [https://github.com/BimaAdi/Make-Maintainable-Python-Project](https://github.com/BimaAdi/Make-Maintainable-Python-Project).
 
 ## Using virtual environtment
-By default when using pip if you do `pip install {some package}` it will store globaly and will be available to all your project.
-The problem is not all your project use that all depedencies. For example you have multiple project one about machine learning and other about backend development.
-Machine learning project use some machine learning related package such as numpy, pandas, scikit learn etc while backend project use some backend related package
-such as Django. Your machine learning project doesn't need django and neither your backend project doesn't need numpy nor scikit learn. By using virtual environtment you
-encapsulated depedencies for every project. To create virtual environtment on your project folder run command:
+By default when using pip if you do `pip install {some package}` it will store globaly and will be available to all your project.The problem is not all your project use that all depedencies. For example you have multiple project one about machine learning and other about backend development.Machine learning project use some machine learning related package such as numpy, pandas, scikit learn etc while backend project use some backend related packagesuch as Django. Your machine learning project doesn't need django and neither your backend project doesn't need numpy nor scikit learn. By using virtual environtment you
+encapsulated depedencies for every project. 
+
+To create virtual environtment on your project folder run command:
 
 
 ```
