@@ -35,12 +35,23 @@ windows (powershell)
 env\Scripts\activate.ps1
 ```
 
-After run that command you notice that your terminal/command promt/powershell have (env) on the left side. This mark that you no longer use your global python intepreter, but you use python intepreter on your env folder. If you perform `pip list` you also notice that you don't have any package depedencies. When you
-perform `pip install {some package}` while you have (env) you will store it on your env folder. Try `pip install Faker` then `pip list` you will see that it installed on your env folder. To use my global python intepreter back. You can create new terminal/command promt/powershell or you deactivate the environtment using command `deactivate`. Don't push env folder to git repository. Make sure to add env folder to your .gitignore.
+After run that command you notice that your terminal/command promt/powershell have (env) on the left side. 
+![terminal on activated virtual environtment](./img/terminal%20active%20virtual%20environtment.png)
+
+This mark that you no longer use your global python intepreter, but you use python intepreter on your env folder. If you perform `pip list` you also notice that you don't have any package depedencies. 
+![pip list virtual environtment](./img/virtual%20environtmend%20pip%20list.png)
+
+When you perform `pip install {some package}` while you have (env) you will store it on your env folder. Try `pip install Faker pandas` then `pip list` you will see that it installed on your env folder. 
+![install depedencies on virtual environtment](./img/install%20depedencies%20on%20virtual%20environtment.png)
+
+To use my global python intepreter back. You can create new terminal/command promt/powershell or you deactivate the environtment using command `deactivate`. Don't push env folder to git repository. Make sure to add env folder to your .gitignore.
 
 ## Note your project depedencies using requirements.txt
 When your project grow larger you need more depedencies. Install all depedencies manualy is not efective. You also need to define what version your python depedencies need. To solve that problem we can use requirements.txt. requirements.txt it just a txt file that store your python depedencies.
-To generate that file on terminal while you using virtual environtment run command `pip freeze > requirements.txt`. `pip freeze` will print all depedencies and it's version in your virtual environtment on terminal while `> requirements.txt` to put output on requirements.txt. After you run that file you notice new file requirements.txt. To reinstall python depedencies you just need run command `pip install -r requirements.txt`. Make sure whenever you add new depedencies to your
+To generate that file on terminal while you using virtual environtment run command `pip freeze > requirements.txt`. `pip freeze` will print all depedencies and it's version in your virtual environtment on terminal while `> requirements.txt` to put output on requirements.txt. 
+![pip freeze virtual environtment](./img/pip%20freeze%20on%20virtual%20environtment.png)
+
+After you run that file you notice new file requirements.txt. To reinstall python depedencies you just need run command `pip install -r requirements.txt`. Make sure whenever you add new depedencies to your
 project update your requirements.txt using `pip freeze > requirements.txt`.
 
 

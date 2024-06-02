@@ -34,8 +34,18 @@ windows (powershell)
 env\Scripts\activate.ps1
 ```
 
-Setelah menjalankan perintah diatas pada tampilan kiri terminal/command promt/powershell terdapat icon (env). Ini menandakan python yang diggunakan adalah python yang terdapat pada folder env (virtual environtmet) bukan python yang terinstalasi secara global. Kalau kalian coba jalankan perintah `pip list` tidak ada depedency apa pun kecuali bawaan python kalian. Kalau kalian jalankan `pip install {nama depedency}` ketika terdapa icon (env) maka depedency tersebut akan disimpan di folder env. Begitu pula jika menggunankan command python. Python yg diggunakan adalah python yang terdapat pada env folder.
+Setelah menjalankan perintah diatas pada tampilan kiri terminal/command promt/powershell terdapat icon (env). 
 
+![terminal on activated virtual environtment](./img/terminal%20active%20virtual%20environtment.png)
+
+Ini menandakan python yang diggunakan adalah python yang terdapat pada folder env (virtual environtmet) bukan python yang terinstalasi secara global. Kalau kalian coba jalankan perintah `pip list` tidak ada depedency apa pun kecuali bawaan python kalian. 
+
+![pip list virtual environtment](./img/virtual%20environtmend%20pip%20list.png)
+
+
+Kalau kalian jalankan `pip install {nama depedency}` ketika terdapa icon (env) maka depedency tersebut akan disimpan di folder env. Coba lakukan `pip install Faker pandas` lalu `pip list` depedencies akan tersimpan di folder env.
+
+![install depedencies on virtual environtment](./img/install%20depedencies%20on%20virtual%20environtment.png)
 
 Untuk menggunakan python intepreter global bisa dengan 2 cara. Cara yang pertama dengan membukan terminal/command promt/powershell baru. Cara kedua dengan mematikan environtmentnya menggunakan perintah `deactivate`.
 
@@ -46,7 +56,10 @@ Pastikan folder env tidak masuk ke git repository jika menggunakan git. tambahka
 Semakin besar suatu project semakin banyak depedency yang dibutuhkan. Mengintall depedency satu per satu pasti akan memakan banyak waktu. Selain itu kita juga harus mendefinisikan versi depedency apa yang digunkan. Untuk menyelesaikan masalah tersebut bisa menggunakan requirements.txt. requirements.txt itu hanya file txt biasa yang menyimpan depedency python dan versi yang diggunakan.
 
 
-Untuk membuat file requirements.txt ketika dalam kondisi menjalankan virtual environtment jalankan perintah `pip freeze > requirements.txt`. Perintah `pip freeze` menampilkan semua depedencies dan versinya pada virtual environtment. Perintah `> requirements.txt` untuk menyimpan hasilnya pada file requirements.txt. Setelah menjalankan perintah akan muncul file requirements.txt. Jadi untuk menginstall kembali semua depedency di project cukup dengan menggunakan perintah `pip install -r requirements.txt`. Pastikan juga setiap menambah depedency baru pada project perbarui juga requirements.txt menggunakan perintah `pip freeze > requirements.txt`.
+Untuk membuat file requirements.txt ketika dalam kondisi menjalankan virtual environtment jalankan perintah `pip freeze > requirements.txt`. Perintah `pip freeze` menampilkan semua depedencies dan versinya pada virtual environtment. Perintah `> requirements.txt` untuk menyimpan hasilnya pada file requirements.txt. 
+![pip freeze virtual environtment](./img/pip%20freeze%20on%20virtual%20environtment.png)
+
+Setelah menjalankan perintah akan muncul file requirements.txt. Jadi untuk menginstall kembali semua depedency di project cukup dengan menggunakan perintah `pip install -r requirements.txt`. Pastikan juga setiap menambah depedency baru pada project perbarui juga requirements.txt menggunakan perintah `pip freeze > requirements.txt`.
 
 
 Agar lebih jelas. Saya memiliki contoh project yang menggunakan semua tips diatas. Kalian bisa melihatnya di repository github [https://github.com/BimaAdi/Make-Maintainable-Python-Project](https://github.com/BimaAdi/Make-Maintainable-Python-Project)
